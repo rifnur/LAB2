@@ -8,12 +8,15 @@ public class LAB2 {
         int [][] nums4 = new int [2][2];
         int [] nums5={10,43,53,74,101,41,35,92,40,18};
         int [] nums6={2, 2, 2, 1, 2, 2, 10, 1};
+        int [] nums7={2, 2, 2, 1, 2, 2, 10, 1};
+
         zadanie1 (nums1);
         zadanie2 (nums2);
         zadanie3 (nums3);
         zadanie4 (nums4);
         zadanie5 (nums5);
-        System.out.println( zadanie6 (nums6));
+        System.out.println("Задание 6: "+ zadanie6 (nums6));
+        zadanie7 (nums7,2);
 
     }
 
@@ -72,33 +75,28 @@ public class LAB2 {
     }
 
     static  boolean zadanie6 (int [] massiv6) {
-       System.out.println("Задание 6: ");
         int sum1 = 0;
         int sum2=0;
-        //do {
         for (int z=0;z<massiv6.length;z++) {
-
-           // sum1 = sum1 + massiv[z];
-
             for (int i = 0; i < massiv6.length - (massiv6.length-z-1); i++) {
                 sum1 = sum1 + massiv6[i];
-                //System.out.println("sum1= "+sum1);
                 }
             for (int j = massiv6.length-1;j>=massiv6.length-( massiv6.length-z-1); j--) {
-
                 sum2 = sum2 + massiv6[j];
-
             }
-
          if (sum1!=sum2) {  sum1=0;
             sum2=0;} else break;
-        }//} while (sum1!=sum2 && sum1!=0 && sum2!=0);
+        }
         if (sum1 == sum2 && sum1!=0 && sum2!=0) {
                 return true;//System.out.print(true);
             }return false;
+    }
 
+    static void zadanie7 (int [] massiv7, int number){
+        if (number>0) {
+            for (int i = 1; i < number; i++) {
 
-
-
+            }
+        }
     }
 }
