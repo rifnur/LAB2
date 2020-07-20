@@ -8,7 +8,7 @@ public class LAB2 {
         int [][] nums4 = new int [2][2];
         int [] nums5={10,43,53,74,101,41,35,92,40,18};
         int [] nums6={2, 2, 2, 1, 2, 2, 10, 1};
-        int [] nums7={2, 2, 2, 1, 2, 2, 10, 1};
+        int [] nums7={1,2,3,4,5,6,7,8,9};//{2, 2, 2, 1, 2, 2, 10, 1};
 
         zadanie1 (nums1);
         zadanie2 (nums2);
@@ -16,8 +16,8 @@ public class LAB2 {
         zadanie4 (nums4);
         zadanie5 (nums5);
         System.out.println("Задание 6: "+ zadanie6 (nums6));
-        zadanie7 (nums7,2);
-
+        //System.out.println("Задание 7: "+ zadanie7 (nums7,2));
+        zadanie7 (nums7,-4);
     }
 
     static void zadanie1 (int [] nums) {
@@ -94,9 +94,32 @@ public class LAB2 {
 
     static void zadanie7 (int [] massiv7, int number){
         if (number>0) {
-            for (int i = 1; i < number; i++) {
+            for (int i = 0; i < number; i++) {
+              int  chislo1=massiv7[0];
+              massiv7[0]=massiv7[massiv7.length-1];
+               for (int j=1; j<massiv7.length-1;j++){
+                   massiv7[massiv7.length-j]=massiv7[massiv7.length-j-1];
+               }
+               massiv7[1]=chislo1;
+
 
             }
-        }
+
+        } /*for (int z=0;z<massiv7.length;z++){
+            System.out.print( massiv7[z]+" ");}*/
+        if (number<0) {
+            for (int i = 0; i > number; i--) {
+                int  chislo1=massiv7[massiv7.length-1];
+                massiv7[massiv7.length-1]=massiv7[0];
+                for (int j=1; j<massiv7.length-1;j++){
+                    massiv7[j-1]=massiv7[j];
+                }
+                massiv7[massiv7.length-1-1]=chislo1;
+
+
+            }
+
+        } for (int z=0;z<massiv7.length;z++){
+            System.out.print( massiv7[z]+" ");}
     }
 }
